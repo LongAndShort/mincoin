@@ -2738,14 +2738,14 @@ void UnloadBlockIndex()
 bool LoadBlockIndex()
 {
 
-//    if (fTestNet)
-//    {
-//        pchMessageStart[0] = 0xfc;
-//        pchMessageStart[1] = 0xc1;
-//        pchMessageStart[2] = 0xb7;
-//        pchMessageStart[3] = 0xdc;
-        //hashGenesisBlock = uint256("0xf5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f");
-//    }
+    if (fTestNet)
+    {
+        pchMessageStart[0] = 0xfc;
+        pchMessageStart[1] = 0xc1;
+        pchMessageStart[2] = 0xb7;
+        pchMessageStart[3] = 0xdc;
+        hashGenesisBlock = uint256("0xf5ae71e26c74beacc88382716aced69cddf3dffff24f384e1808905e0188f68f");
+    }
 
     //
     // Load block index from databases
